@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticator</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Create a username and password checker app - very simple, 
+    //just requiring the use of prompt. No other input strategy is required at this stage.
+    const userId = prompt("Enter your username:");
+    const password = prompt("Enter your password:");
+
+
+    // The user name should be admin, and the password should be secret.
+
+    // If the user enters anything other than the required user name and password combination,
+    // display a string on the console and on the web page (you need to set this up) : BAD LOGIN CREDENTIALS
+    
+    // If the user name and password have been entered correctly, 
+    //display a string in the console and on the web page : Welcome admin!
+
+
+    function checkLogin(userId, password) {
+            if (userId === "admin") {
+                // Successful login
+                console.log("Welcome admin!");
+                document.body.innerHTML += "<p>Welcome admin!</p>";
+            } 
+            else if(password === "secret") {
+                // Successful login
+                console.log("Welcome admin!");
+                document.body.innerHTML += "<p>Welcome admin!</p>";
+            }
+            else {
+                // Failed login
+                console.log("BAD LOGIN CREDENTIALS");
+                document.body.innerHTML += "<p>BAD LOGIN CREDENTIALS</p>";
+            }
+        }
+
+    // *** Requirement - you need to use a function, with parameters of userId and password. 
+    //Call the function to execute the check.
+    checkLogin(userId, password);
+
+</script>
+
+</html>
